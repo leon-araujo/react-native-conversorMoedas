@@ -45,6 +45,7 @@ export default function Dolar() {
           placeholder='Digite o valor em R$ Real'
           value={inputReal}
           onChangeText={n => setInputReal(n)}
+          onPressIn={() => setInputReal(0)}
           ></TextInput>
           <View style={styles.containerBtn}>
             <TouchableOpacity onPress={convert}><Text style={styles.TextBtn}>{convertSymbol} Converter</Text></TouchableOpacity>

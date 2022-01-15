@@ -26,7 +26,7 @@ export default function Euro() {
     }
     if (inputReal != 0 || inputReal != '' || inputReal != null ) {
       setResult('€ ' + (parseFloat(inputReal).toFixed(2) * euro).toFixed(2));
-    }
+;    }
   }
 
   const convertSymbol = <Ionicons style={{marginLeft: 8, marginRight: 5}} name='md-swap-vertical-outline' size={25} color={'#5F6BC3'}/> ;
@@ -45,6 +45,7 @@ export default function Euro() {
           placeholder='Digite o valor em R$ Real'
           value={inputReal}
           onChangeText={n => setInputReal(n)}
+          onPressIn={() => setInputReal(0)}
           ></TextInput>
           <View style={styles.containerBtn}>
             <TouchableOpacity onPress={convert}><Text style={styles.TextBtn}>{convertSymbol} Converter</Text></TouchableOpacity>
