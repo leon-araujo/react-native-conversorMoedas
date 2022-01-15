@@ -34,6 +34,10 @@ export default function Dolar() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.container}>
+        <View style={styles.containerCotDolar}>
+          <Text style={styles.containerCotDolarText}>Cotação do Atual do Dolar</Text>
+          <Text style={styles.containerCotDolarText}>US$ {dolar}</Text>
+        </View>
         <View style={styles.boxPrinpal}>
           <TextInput
           keyboardType="numeric"
@@ -103,5 +107,15 @@ const styles = StyleSheet.create({
     width: 150,
     textAlign: 'center',
     lineHeight: 35
+  },
+  containerCotDolar: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 40
+  },
+  containerCotDolarText: {
+    fontSize: 25,
+    fontWeight: 'bold',
+    color: '#8DA2D7'
   }
 });
