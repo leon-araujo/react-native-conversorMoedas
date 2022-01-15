@@ -4,7 +4,6 @@ import {Ionicons} from '@expo/vector-icons';
 
 import EuroCot from '../services/CotEuro';
 
-
 export default function Euro() {
   const [inputReal, setInputReal] = useState();
   const [euro, setEuro] = useState();

@@ -4,7 +4,6 @@ import {Ionicons} from '@expo/vector-icons';
 
 import DolarCot from '../services/CotDolar';
 
-
 export default function Dolar() {
   const [inputReal, setInputReal] = useState();
   const [dolar, setDolar] = useState();
