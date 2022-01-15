@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyleSheet, View, TouchableOpacity, Text, SafeAreaView, Modal } from 'react-native';
+import { StyleSheet, View, TouchableOpacity, Text, SafeAreaView } from 'react-native';
+import {Ionicons} from '@expo/vector-icons';
 
 export default function Home({navigation}) {
     function Dolar() {
@@ -8,12 +9,14 @@ export default function Home({navigation}) {
     function Euro() {
         return navigation.navigate("Euro")
     } 
+
+    const convert = <Ionicons style={{marginLeft: 8, marginRight: 5}} name='md-swap-horizontal-sharp' size={25} color={'#fff'}/>;
   return (
     <SafeAreaView style={styles.container}>
         <Text style={styles.containerTxt}>Escolha a opção de conversão:</Text>
         <View style={styles.boxPrinpal}>
-            <TouchableOpacity onPress={Dolar} style={styles.btnConverte}><Text style={styles.btnConverteText}>$ Dolar</Text></TouchableOpacity>
-            <TouchableOpacity onPress={Euro} style={styles.btnConverte}><Text style={styles.btnConverteText}>€ Euro</Text></TouchableOpacity>
+            <TouchableOpacity onPress={Dolar} style={styles.btnConverte}><Text style={styles.btnConverteText}>R$ Real {convert} $ Dolar</Text></TouchableOpacity>
+            <TouchableOpacity onPress={Euro} style={styles.btnConverte}><Text style={styles.btnConverteText}>R$ Real {convert} € Euro</Text></TouchableOpacity>
         </View>
     </SafeAreaView>
   );
@@ -36,7 +39,7 @@ const styles = StyleSheet.create({
   btnConverte: {
       backgroundColor: '#00BAD5',
       padding: 10,
-      width: 180,
+      width: 280,
       borderRadius: 10,
       marginBottom: 25,
       marginTop: 25

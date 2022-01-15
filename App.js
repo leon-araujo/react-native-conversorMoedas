@@ -14,32 +14,32 @@ export default function App() {
       <Stack.Navigator initialRouteName="Home" >
         <Stack.Screen name="Home" component={Home}
         options={{
-          title: "Conversor de Moedas Do Leonardo Moura",
+          title: "Conversor de Moedas",
           headerStyle: {
             backgroundColor: "#1C6FCA",
           },
           headerTintColor: "#F0F1F2",
-          headerTitleAlign: "center"
+          headerTitleAlign: 'center',
         }}
         />
         <Stack.Screen name="Dolar" component={Dolar}
         options={{
-          title: "Conversor de Moedas Do Leonardo Moura",
+          title: "Conversor de Moedas",
           headerStyle: {
             backgroundColor: "#1C6FCA",
           },
           headerTintColor: "#F0F1F2",
-          headerTitleAlign: "center",
+          headerTitleAlign: 'center',
         }}
         />
         <Stack.Screen name="Euro" component={Euro}
         options={{
-          title: "Conversor de Moedas Do Leonardo Moura",
+          title: "Conversor de Moedas",
           headerStyle: {
             backgroundColor: "#1C6FCA",
           },
           headerTintColor: "#F0F1F2",
-          headerTitleAlign: "center"
+          headerTitleAlign: 'center',
         }}
         />
       </Stack.Navigator>
